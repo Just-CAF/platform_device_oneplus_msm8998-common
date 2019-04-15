@@ -524,3 +524,7 @@ BOARD_VENDOR_EXTRA_SYMLINKS += \
 
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
