@@ -109,7 +109,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    tinymix
+    tinymix \
+    libgav1
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -468,6 +469,13 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
+
+# QAHW WRAPPER
+PRODUCT_PACKAGES += \
+    libqahw.so \
+    libqahwwrapper.so \
+    hal_play_test \
+    hal_rec_test
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
