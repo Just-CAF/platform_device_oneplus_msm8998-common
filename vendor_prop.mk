@@ -187,6 +187,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.ts.rtmakeup=false \
     persist.vendor.camera.tintless.skip=1
 
+#Whitelisting the below packages
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.privapp.list=org.codeaurora.snapcam \
+    persist.camera.privapp.list=org.codeaurora.snapcam
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
@@ -418,3 +423,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
