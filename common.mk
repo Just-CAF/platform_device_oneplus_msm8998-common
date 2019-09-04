@@ -491,3 +491,6 @@ PRODUCT_PACKAGES += \
 
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
+
+$(call inherit-product, vendor/aowp/qcom_target.mk)
+
