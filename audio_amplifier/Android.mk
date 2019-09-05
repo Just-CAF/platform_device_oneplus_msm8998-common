@@ -24,9 +24,9 @@ LOCAL_C_INCLUDES := \
     system/media/audio/include \
     $(call include-path-for, audio-route) \
     $(call include-path-for, audio-effects) \
-    $(call project-path-for,qcom-audio)/hal \
-    $(call project-path-for,qcom-audio)/hal/audio_extn \
-    $(call project-path-for,qcom-audio)/hal/msm8974
+    hardware/qcom/audio-caf/hal \
+    hardware/qcom/audio-caf/hal/audio_extn \
+    hardware/qcom/audio-caf/hal/msm8974
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include
