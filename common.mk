@@ -370,7 +370,7 @@ PRODUCT_PACKAGES += \
     rcs_service_api.xml
 
 # Recovery
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES_ENG += \
     librecovery_updater_oneplus
 
 PRODUCT_COPY_FILES += \
