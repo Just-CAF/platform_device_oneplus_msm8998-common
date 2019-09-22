@@ -476,8 +476,8 @@ PRODUCT_PACKAGES += \
 # libstdc++: camera.msm8998
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
-    vndk_package \
     libgui_vendor
+    vndk-sp
 
 # VR
 PRODUCT_PACKAGES += \
