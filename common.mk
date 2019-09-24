@@ -504,5 +504,12 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
+# Create a symlink for libcppf.so and liboemcrypto.so which expects the cppf firmware at
+# /system/etc/firmware to be able to move cppf firmware (via hex edit) to /vendor a link 
+# /vendor/firmware/drm is created, which points to /vendor/firmware
+BOARD_VENDOR_EXTRA_SYMLINKS += \
+    /vendor/firmware:/firmware/drm
+
+
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
