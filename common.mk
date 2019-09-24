@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
 
+# LIBPERFLOCK
+PRODUCT_PACKAGES += \
+    org.codeaurora.Performance
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
@@ -400,8 +404,8 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     telephony-ext
 
-#PRODUCT_BOOT_JARS += \
-#    telephony-ext
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
