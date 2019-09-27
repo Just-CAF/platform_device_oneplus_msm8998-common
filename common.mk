@@ -24,6 +24,9 @@
 
 $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 
+# Include vendor
+include vendor/custom/configs/common_full_phone.mk
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
