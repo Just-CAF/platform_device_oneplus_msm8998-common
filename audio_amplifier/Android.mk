@@ -24,13 +24,15 @@ LOCAL_C_INCLUDES := \
     system/media/audio/include \
     $(call include-path-for, audio-route) \
     $(call include-path-for, audio-effects) \
-    $(call project-path-for,qcom-audio)/hal \
-    $(call project-path-for,qcom-audio)/hal/audio_extn \
-    $(call project-path-for,qcom-audio)/hal/msm8974
+    hardware/qcom/audio/hal \
+    hardware/qcom/audio/hal/audio_extn \
+    hardware/qcom/audio/hal/msm8974
 
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include
-LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+LOCAL_HEADER_LIBRARIES += generated_kernel_headers
+LOCAL_C_INCLUDES += hardware/libhardware/include
+#LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+#LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include
+#LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/vendor/qcom/opensource/audio-kernel/include
 
 LOCAL_SHARED_LIBRARIES := \
