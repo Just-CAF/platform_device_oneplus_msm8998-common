@@ -22,11 +22,11 @@ LOCAL_C_INCLUDES := \
     external/tinycompress/include \
     hardware/libhardware/include \
     system/media/audio/include \
-    $(call include-path-for, audio-route) \
-    $(call include-path-for, audio-effects) \
-    hardware/qcom/audio/hal \
-    hardware/qcom/audio/hal/audio_extn \
-    hardware/qcom/audio/hal/msm8974
+    system/media/audio_route/include \
+    system/media/audio_effects/include \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal/audio_extn \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal/msm8974
 
 LOCAL_HEADER_LIBRARIES += generated_kernel_headers
 LOCAL_C_INCLUDES += hardware/libhardware/include
