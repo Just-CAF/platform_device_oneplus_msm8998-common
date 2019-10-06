@@ -137,8 +137,8 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library
 
 # LIBPERFLOCK
-PRODUCT_PACKAGES += \
-    org.codeaurora.Performance
+#PRODUCT_PACKAGES += \
+#    org.codeaurora.Performance
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -444,8 +444,8 @@ PRODUCT_PACKAGES += \
     thermal.msm8998
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus_msm8998
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.touch@1.0-service.oneplus_msm8998
 
 # USB
 PRODUCT_PACKAGES += \
@@ -455,8 +455,8 @@ PRODUCT_PACKAGES += \
 -include $(LOCAL_PATH)/vendor_prop.mk
 
 # Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2019-08-01
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.lineage.build.vendor_security_patch=2019-08-01
 
 # Verity
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
@@ -527,7 +527,3 @@ BOARD_VENDOR_EXTRA_SYMLINKS += \
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
