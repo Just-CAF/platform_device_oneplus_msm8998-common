@@ -22,6 +22,7 @@ LOCAL_C_INCLUDES := \
     external/tinycompress/include \
     hardware/libhardware/include \
     system/media/audio/include \
+    system/media/audio_utils/include \
     system/media/audio_route/include \
     system/media/audio_effects/include \
     vendor/qcom/opensource/audio-hal/primary-hal/hal \
