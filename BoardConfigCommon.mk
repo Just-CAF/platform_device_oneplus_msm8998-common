@@ -34,8 +34,14 @@ BOARD_VENDOR := oneplus
 # we are too big to fit in
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
+SDCLANG := true
+SDCLANG_PATH := /root/caf10/vendor/qcom/sdclang-8.0/linux-x86/bin
+SDCLANG_LTO_DEFS := /root/caf10/vendor/custom/sdclang/sdllvm-lto-defs.mk
+
 # Compile libhwui in performance mode
 HWUI_COMPILE_FOR_PERF := true
+
+TARGET_USE_SDCLANG := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
@@ -179,7 +185,7 @@ BOARD_USES_QCNE := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
+TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/commonsys/cryptfs_hw
 
 # Display
 BOARD_USES_ADRENO := true
