@@ -33,6 +33,7 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
+import android.os.SystemProperties;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
@@ -42,12 +43,11 @@ import android.view.KeyEvent;
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
-import lineageos.providers.LineageSettings;
-
 public class KeyHandler implements DeviceKeyHandler {
 
     private static final String TAG = KeyHandler.class.getSimpleName();
     private static final int GESTURE_REQUEST = 1;
+    private static String FPNAV_ENABLED_PROP = "sys.fpnav.enabled";
 
     private static final int ZEN_MODE_VIBRATION = 4;
 
@@ -91,19 +91,6 @@ public class KeyHandler implements DeviceKeyHandler {
         mGestureWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 "GestureWakeLock");
 
-        final Resources resources = mContext.getResources();
-        mProximityTimeOut = resources.getInteger(
-                org.lineageos.platform.internal.R.integer.config_proximityCheckTimeout);
-        mProximityWakeSupported = resources.getBoolean(
-                org.lineageos.platform.internal.R.bool.config_proximityCheckOnWake);
-
-        if (mProximityWakeSupported) {
-            mSensorManager = context.getSystemService(SensorManager.class);
-            mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-            mProximityWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
-                    "ProximityWakeLock");
-        }
-
         mVibrator = context.getSystemService(Vibrator.class);
         if (mVibrator == null || !mVibrator.hasVibrator()) {
             mVibrator = null;
@@ -115,10 +102,6 @@ public class KeyHandler implements DeviceKeyHandler {
         public void handleMessage(Message msg) {
             if (msg.arg1 == FLIP_CAMERA_SCANCODE) {
                 mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
-
-                Intent intent = new Intent(
-                        lineageos.content.Intent.ACTION_SCREEN_CAMERA_GESTURE);
-                mContext.sendBroadcast(intent, Manifest.permission.STATUS_BAR_SERVICE);
                 doHapticFeedback();
             }
         }
@@ -159,19 +142,6 @@ public class KeyHandler implements DeviceKeyHandler {
                 mNotificationManager.setZenMode(sSupportedSliderModes.get(scanCode), null, TAG);
             }
             doHapticFeedback();
-        } else if (!mEventHandler.hasMessages(GESTURE_REQUEST)) {
-            Message msg = getMessageForKeyEvent(scanCode);
-            boolean defaultProximity = mContext.getResources().getBoolean(
-                org.lineageos.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault);
-            boolean proximityWakeCheckEnabled = LineageSettings.System.getInt(
-                    mContext.getContentResolver(), LineageSettings.System.PROXIMITY_ON_WAKE,
-                    defaultProximity ? 1 : 0) == 1;
-            if (mProximityWakeSupported && proximityWakeCheckEnabled && mProximitySensor != null) {
-                mEventHandler.sendMessageDelayed(msg, mProximityTimeOut);
-                processEvent(scanCode);
-            } else {
-                mEventHandler.sendMessage(msg);
-            }
         }
         return null;
     }
@@ -210,10 +180,10 @@ public class KeyHandler implements DeviceKeyHandler {
         if (mVibrator == null) {
             return;
         }
-        boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
-                LineageSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0;
-        if (enabled) {
-            mVibrator.vibrate(50);
-        }
+        mVibrator.vibrate(50);
+    }
+
+    public void handleNavbarToggle(boolean enabled) {
+        SystemProperties.set(FPNAV_ENABLED_PROP, enabled ? "0" : "1");
     }
 }

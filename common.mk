@@ -511,6 +511,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     loggy.sh
 
+# Device-parts
+PRODUCT_PACKAGES += \
+    ConfigPanel
+
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
     libaacwrapper \

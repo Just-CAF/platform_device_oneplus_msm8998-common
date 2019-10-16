@@ -44,7 +44,6 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
-        if (lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE.equals(action)) {
             // Disable button settings if needed
             if (!hasButtonProcs()) {
                 disableComponent(context, ButtonSettingsActivity.class.getName());
@@ -76,7 +75,7 @@ public class Startup extends BroadcastReceiver {
             } else {
                 updateOClickServiceState(context);
             }
-        } else if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+	if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
             if (hasOClick()) {
                 updateOClickServiceState(context);
             }
