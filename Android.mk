@@ -114,7 +114,7 @@ BT_FIRMWARE_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(BT
 $(BT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating BT firmware symlink: $@"
 	@mkdir -p $(dir $@)
-	#@rm -rf $@
+	@rm -rf $@
 	$(hide) ln -sf /vendor/bt_firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(BT_FIRMWARE_SYMLINKS)

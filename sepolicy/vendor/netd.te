@@ -1,0 +1,1 @@
+allow netd sysfs_virtual:dir { search };

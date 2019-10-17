@@ -1,0 +1,4 @@
+r_dir_file(port-bridge, sysfs_msm_subsys)
+
+allow port-bridge sysfs_soc:dir search;
+allow port-bridge sysfs_soc:file r_file_perms;

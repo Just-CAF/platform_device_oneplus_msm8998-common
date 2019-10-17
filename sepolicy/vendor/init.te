@@ -2,3 +2,19 @@ allow init proc_alarm_boot:file { r_file_perms };
 
 allow init sysfs_fpc:file { r_file_perms };
 allow init sysfs_data:file { r_file_perms };
+
+allow init sysfs_leds:lnk_file { r_file_perms };
+
+allow init hal_power_default_exec:file { execute };
+
+allow init hwservicemanager:binder call;
+allow init hwservicemanager:binder transfer;
+
+allow init hal_perf_default:binder call;
+allow init hal_perf_default:binder transfer;
+
+allow init proc_touchpanel:file { rw_file_perms };
+
+allow init hal_usb_default_exec:file { execute };
+
+allow system_server init:binder { transfer call };

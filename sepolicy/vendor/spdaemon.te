@@ -1,0 +1,2 @@
+allow spdaemon sysfs_soc:dir { search };
+

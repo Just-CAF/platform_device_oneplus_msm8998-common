@@ -1,0 +1,1 @@
+allow hal_wifi_hostapd_default wifi_hostapd_so:file { rx_file_perms };

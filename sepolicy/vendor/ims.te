@@ -1,1 +1,5 @@
 set_prop(ims, diag_prop)
+
+allow ims sysfs_soc:dir search;
+allow ims sysfs_soc:file r_file_perms;
+

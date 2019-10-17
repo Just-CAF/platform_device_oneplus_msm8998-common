@@ -1,2 +1,4 @@
 # neverallow
 #allow surfaceflinger hal_display_config_hwservice:hwservice_manager { add };
+allow surfaceflinger same_process_hal_file:file { rx_file_perms };
+allow surfaceflinger display_config:file { rx_file_perms };

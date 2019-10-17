@@ -1,1 +1,4 @@
 set_prop(qti, diag_prop)
+
+allow qti sysfs_soc:dir search;
+allow qti sysfs_soc:file r_file_perms;
