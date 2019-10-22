@@ -318,6 +318,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_3="" \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=22,20 \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true
     telephony.lteOnCdmaDevice=1 \
     keyguard.no_require_sim=true \
     ro.com.android.dataroaming=true \
