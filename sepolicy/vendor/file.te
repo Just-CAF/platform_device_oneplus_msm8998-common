@@ -15,5 +15,4 @@ type bluetooth_audio_so, file_type, system_file_type;
 type wifi_hostapd_so, file_type, system_file_type;
 type display_config, file_type, vendor_file_type, system_file_type;
 type sysfs_soc, fs_type, sysfs_type;
-type sysfs_msm_subsys, sysfs_type, fs_type;
 type debugfs_system_stats, debugfs_type, fs_type;
