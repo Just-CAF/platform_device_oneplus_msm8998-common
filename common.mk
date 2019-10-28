@@ -158,12 +158,6 @@ PRODUCT_PACKAGES += \
     libshim_camera \
 
 PRODUCT_PACKAGES += \
-    SnapdragonGallery \
-    SnapdragonMusic \
-    SnapdragonCamera \
-    MusicFX
-
-PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
