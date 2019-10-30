@@ -520,5 +520,9 @@ BOARD_VENDOR_EXTRA_SYMLINKS += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# tri-state-key
+PRODUCT_PACKAGES += \
+    tri-state-key_daemon
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)

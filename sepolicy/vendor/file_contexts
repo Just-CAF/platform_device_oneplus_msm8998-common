@@ -110,3 +110,6 @@
 # Power HAL
 /sys/kernel/debug/system_stats                                  u:object_r:debugfs_system_stats:s0
 /sys/devices/soc/780000.qcom,msm-core/uio/uio1/name(/.*)?	u:object_r:sysfs_thermal:s0
+
+# tri-state-key
+/system/bin/tri-state-key_daemon		                u:object_r:tri-state-key_daemon_exec:s0
