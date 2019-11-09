@@ -265,7 +265,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mmp.enable.3g2=true \
     media.aac_51_output_enabled=true \
     mm.enable.sec.smoothstreaming=true \
-    persist.mm.enable.prefetch=true \
     vidc.enc.dcvs.extra-buff-count=2 \
     persist.media.treble_omx=true \
     vendor.vidc.debug.level=1 \
@@ -295,12 +294,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.at_library=libqti-at.so \
     ro.vendor.gt_library=libqti-gt.so \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=5 \
-    ro.vendor.qti.sys.fw.bservice_age=5000
+    ro.vendor.qti.sys.fw.bservice_age=5000 \
+    ro.vendor.qti.sys.fw.bservice_limit=5
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
