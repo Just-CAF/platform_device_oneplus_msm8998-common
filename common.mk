@@ -418,7 +418,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     ims-ext-common_system \
-    telephony-ext
+    telephony-ext \
+    tcmiface
+    
+    
+# TCP Connection Management
+PRODUCT_PACKAGES += \
+    tcmiface
+
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
