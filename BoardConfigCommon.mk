@@ -35,13 +35,12 @@ BOARD_VENDOR := oneplus
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
 SDCLANG := true
-SDCLANG_PATH := /root/caf10/vendor/qcom/sdclang-8.0/linux-x86/bin
-SDCLANG_LTO_DEFS := /root/caf10/vendor/custom/sdclang/sdllvm-lto-defs.mk
+TARGET_USE_SDCLANG := true
+SDCLANG_PATH := vendor/qcom/sdclang-8.0/linux-x86/bin
+SDCLANG_LTO_DEFS := vendor/custom/sdclang/sdllvm-lto-defs.mk
 
 # Compile libhwui in performance mode
 HWUI_COMPILE_FOR_PERF := true
-
-TARGET_USE_SDCLANG := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
@@ -213,7 +212,7 @@ USE_OPENGL_RENDERER := true
 
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 
-OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
