@@ -424,8 +424,8 @@ PRODUCT_BOOT_JARS += \
     ims-ext-common_system \
     telephony-ext \
     tcmiface
-    
-    
+
+
 # TCP Connection Management
 PRODUCT_PACKAGES += \
     tcmiface
@@ -488,10 +488,6 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vndk-sp
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0-v28.so \
-    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0-v28.so
-
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
@@ -530,7 +526,7 @@ PRODUCT_PACKAGES += \
     libnl
 
 # Create a symlink for libcppf.so and liboemcrypto.so which expects the cppf firmware at
-# /system/etc/firmware to be able to move cppf firmware (via hex edit) to /vendor a link 
+# /system/etc/firmware to be able to move cppf firmware (via hex edit) to /vendor a link
 # /vendor/firmware/drm is created, which points to /vendor/firmware
 BOARD_VENDOR_EXTRA_SYMLINKS += \
     /vendor/firmware:/firmware/drm

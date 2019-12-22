@@ -74,10 +74,10 @@ TARGET_USES_INTERACTION_BOOST := true
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 
-BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.usbconfigfs=true 
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1
+BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.usbconfigfs=true
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.veritymode=eio
 BOARD_KERNEL_BASE := 0x00000000
@@ -199,12 +199,12 @@ TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/commonsys/cryptfs_hw
 # Display
 BOARD_USES_ADRENO := true
 
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
 TARGET_USES_ION := true
+TARGET_USES_NEW_ION_API := true
 TARGET_USES_OVERLAY := true
 TARGET_USES_COLOR_METADATA := true
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
@@ -212,10 +212,7 @@ USE_OPENGL_RENDERER := true
 
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-
-VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
+OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -321,7 +318,6 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-DISABLE_EAP_PROXY := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
