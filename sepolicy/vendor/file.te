@@ -6,13 +6,6 @@ type sysfs_fpc_key, fs_type, sysfs_type;
 type sysfs_fpc_irq, fs_type, sysfs_type;
 type sysfs_fpc_screen, fs_type, sysfs_type;
 type sysfs_fpc_proximity, fs_type, sysfs_type;
+type sysfs_project_info, fs_type, sysfs_type;
 type sysfs_wifi, fs_type, sysfs_type;
-type sysfs_virtual, fs_type, sysfs_type;
-type sysfs_hctosys_file, sysfs_type, fs_type;
-
-type wifi_supplicant_so, file_type, system_file_type;
-type bluetooth_audio_so, file_type, system_file_type;
-type wifi_hostapd_so, file_type, system_file_type;
-type display_config, file_type, vendor_file_type, system_file_type;
-type sysfs_soc, fs_type, sysfs_type;
-type debugfs_system_stats, debugfs_type, fs_type;
+#type vendor_keylayout_file, file_type, vendor_file_type;

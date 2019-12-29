@@ -10,7 +10,3 @@ allow dashd dash_device:chr_file { rw_file_perms };
 
 r_dir_file(dashd, sysfs_usb_supply);
 r_dir_file(dashd, sysfs_battery_supply);
-
-allow dashd self:capability { sys_boot dac_override };
-
-allow dashd shell_data_file:dir { r_dir_perms };

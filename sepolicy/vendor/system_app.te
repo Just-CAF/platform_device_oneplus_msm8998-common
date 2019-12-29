@@ -1,11 +1,13 @@
 allow system_app proc_touchpanel:dir { search };
 allow system_app proc_touchpanel:file { rw_file_perms };
 
+allow system_app sysfs_switch:dir { search };
+allow system_app sysfs_switch:file { rw_file_perms };
+
 allow system_app sysfs_fpc_key:file { rw_file_perms };
 allow system_app sysfs_fpc_screen:file { rw_file_perms };
 allow system_app sysfs_fpc_proximity:file { rw_file_perms };
 
-allow system_app same_process_hal_file:file { rx_file_perms };
-
-allow system_app apex_service:service_manager { find };
-allow system_app system_suspend_control_service:service_manager { find };
+allow system_app sysfs_dm:file rw_file_perms;
+allow system_app sysfs_graphics:dir search;
+allow system_app sysfs_graphics:file rw_file_perms;

@@ -1,2 +1,1 @@
 set_prop(cnd, diag_prop)
-allow cnd sysfs_soc:dir { search };

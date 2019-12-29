@@ -1,2 +1,0 @@
-# allow shell to run dmesg
-allow shell kernel:system syslog_read;

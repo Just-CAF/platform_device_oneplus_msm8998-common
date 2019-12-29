@@ -1,2 +1,2 @@
-allow rmt_storage sysfs_data:file { read open };
-
+r_dir_file(rmt_storage, sysfs_data)
+r_dir_file(rmt_storage, sysfs_ssr)

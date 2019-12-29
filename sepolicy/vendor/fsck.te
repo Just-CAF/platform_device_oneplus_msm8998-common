@@ -1,9 +1,0 @@
-allow fsck block_device:blk_file { read write };
-allow fsck block_device:blk_file open;
-allow fsck block_device:blk_file ioctl;
-
-allow fsck self:capability { dac_override };
-
-allow fsck tmpfs:chr_file { open getattr };
-allow fsck tmpfs:lnk_file read;
-allow fsck tmpfs:blk_file { getattr read write };

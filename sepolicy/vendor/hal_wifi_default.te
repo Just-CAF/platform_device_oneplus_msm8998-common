@@ -1,4 +1,2 @@
 allow hal_wifi_default sysfs_wifi:file { w_file_perms };
-allow hal_wifi_default default_prop:file { r_file_perms };
-allow hal_wifi_default proc_net:file { getattr open read };
-allow hal_wifi_default default_prop:property_service { set }; 
+allow hal_wifi_default proc_net:file { w_file_perms };

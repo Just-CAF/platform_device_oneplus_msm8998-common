@@ -1,4 +1,1 @@
 set_prop(hal_gnss_qti, diag_prop);
-
-allow hal_gnss_qti sysfs_soc:dir r_dir_perms;
-allow hal_gnss_qti sysfs_soc:file r_file_perms;

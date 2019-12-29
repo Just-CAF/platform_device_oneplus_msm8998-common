@@ -1,1 +1,0 @@
-allow hal_wifi_supplicant_default wifi_supplicant_so:file { rx_file_perms };
