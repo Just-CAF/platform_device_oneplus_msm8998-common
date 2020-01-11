@@ -54,26 +54,29 @@ vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
 # Audio
-lib64/libldacBT_enc.so:vendor/lib64/libldacBT_enc.so
-lib64/libldacBT_abr.so:vendor/lib64/libldacBT_abr.so
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
 vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libqtigef.so
+vendor/lib/libacdb-fts.so|d35f14942bffff568899474fe50c3d0af2f8aae3
+vendor/lib/libacdbloader.so|7ce468a82529bc6f4a0b01a37edce9c35a6aebf8
+vendor/lib/libacdbrtac.so|cee53e7abebacf8ce9cebc5bc55cd237a09e6d84
+vendor/lib/libadiertac.so|f9e40b5005b215d30c84bd660b46e250f1d2be11
+vendor/lib/libaudcal.so|f118e565fd640c250c41140af495dd54a9d9d2fd
+vendor/lib/libqtigef.so|a6972c32f806679cf063005477925f174da24f0c
+vendor/lib64/libacdb-fts.so|8379a2c7d0f5282eb79feeca6aa1fde8e54611a1
+vendor/lib64/libacdbloader.so|e53edbf416ee06024ef4570bf140069890ca29d4
+vendor/lib64/libacdbrtac.so|5b51cceb312e1d4c3aa42f8bd1ac6859d630fbe5
+vendor/lib64/libadiertac.so|d269232bb052926dcf27b075eb2ec00cafe9d666
+vendor/lib64/libaudcal.so|10179518426d54c8d638ad1b310f86b0d2754214
+vendor/lib/libaudioalsa.so|6fe8d894f3001ec832a702b88a8043346718da2b
+vendor/lib/libaudioparsers.so|43da8538b0bf29f6eaf1b0224a1d9a9704170480
+vendor/lib64/libaudioalsa.so|a192b115e5230354e161065ab7a4f97a21adf956
+vendor/lib64/libaudioparsers.so|235e2c40298ba328fd79613d013ee2584e4de5f7
+
+# Audio (Sound effects)
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
 vendor/lib64/libeffectsconfig.so
-vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcvirt.so
@@ -102,9 +105,9 @@ vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 
 # Bluetooth (Audio)
+lib64/libldacBT_enc.so:vendor/lib64/libldacBT_enc.so
+lib64/libldacBT_abr.so:vendor/lib64/libldacBT_abr.so
 -lib/vendor.qti.hardware.fm@1.0.so
-lib64/libaptX_encoder.so
-lib64/libaptXHD_encoder.so
 -lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib/vendor.qti.hardware.fm@1.0.so
@@ -114,6 +117,10 @@ vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+
+# Bluetooth (aptX) - from crosshatch - QP1A.190711.020
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # Camera
 framework/com.qualcomm.qti.camera.jar
@@ -223,7 +230,6 @@ vendor/lib/libSTdisp.so
 vendor/lib/libUBWC.so
 vendor/lib/libVDDualCameraBlurlessAPI.so
 vendor/lib/libvideoutils.so
-vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmmcamera2_frame_algorithm.so
 vendor/lib64/libmmcamera2_is.so
@@ -249,7 +255,6 @@ vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libUBWC.so
 vendor/lib64/libvideoutils.so
-vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 
 # Camera actuators
 vendor/lib/libactuator_lc898217xc_imx350.so
@@ -526,7 +531,7 @@ vendor/lib64/vendor.qti.latency@2.0.so
 # DPM
 bin/dpmd
 etc/dpm/dpm.conf
-etc/init/dpmd.rc
+#etc/init/dpmd.rc
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar
@@ -710,46 +715,46 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
 
 # Graphics
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/egl/libQTapGLES.so
+vendor/lib/egl/eglSubDriverAndroid.so|8dec0cbf55e49be73ac973765e2f1034be1ea7f5
+vendor/lib/egl/libEGL_adreno.so|e3d8fc2f568026e1a194f63f8fd4026b6349aff8
+vendor/lib/egl/libGLESv1_CM_adreno.so|02913fc534f99d429591a5c9f35950b59c6e8fd3
+vendor/lib/egl/libGLESv2_adreno.so|774fde46fcf6e61787cb48b432cb820ec81b9906
+vendor/lib/egl/libQTapGLES.so|cc19830a4f31dfa9be71b2bcebe858472e76d788
+vendor/lib/egl/libq3dtools_adreno.so|0ff4a4961eb8c786051cecb5a966281d21a42b41
+vendor/lib/egl/libq3dtools_esx.so|024cd69331e2caf950895f46676ab89b871c7446
 vendor/lib/hw/vulkan.msm8998.so|102dc4ee268de6db66dc3ec61200aeeeb85e55c3
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/librs_adreno.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/egl/libQTapGLES.so
+vendor/lib/libC2D2.so|fda440c6a52c9cfddf0f7ad7a6afbf5a88e4cc98
+vendor/lib/libCB.so|811841387240d86656aedd83ea04c04473981b20
+vendor/lib/libOpenCL.so|d1699a590a52b11c469adcf66c1f1e9e66c7d739
+vendor/lib/libRSDriver_adreno.so|c3ca4f779308a0f450b01e4b872de62d0aaea17c
+vendor/lib/libadreno_utils.so|ba4f2792f190b69da345041f664398235ab02923
+vendor/lib/libbccQTI.so|7c0a9100fda80120c3856ff6d4862c03be6c9d09
+vendor/lib/libc2d30_bltlib.so|65f50d311ee88624810244f2eb730981677643c5
+vendor/lib/libgsl.so|90b330a15ab6f6c8620d4a425cd00017d1b54cb6
+vendor/lib/libllvm-glnext.so|3349586613535291b2a90b3fd861107cd41ce06c
+vendor/lib/libllvm-qcom.so|a64a67c1804b5981bed5829d5097dc3c9f881e9e
+vendor/lib/librs_adreno.so|387d1052ee51c59fcf22b87ab03fd76ad5480679
+vendor/lib/librs_adreno_sha1.so|6e7fd4192adb0ce2a350facc55f4521ae7a2b847
+vendor/lib64/egl/eglSubDriverAndroid.so|0c1ede76e1a61d7a9f4ad509db405273099f6c6c
+vendor/lib64/egl/libEGL_adreno.so|fa0ae606142a063b4b96174473a2af7cbbae08c4
+vendor/lib64/egl/libGLESv1_CM_adreno.so|2f63eeafb33740b046619b44e9a88e1f9b2a4926
+vendor/lib64/egl/libGLESv2_adreno.so|f44aea7dc1b33e6e8defb6accc2d8b7654928e33
+vendor/lib64/egl/libQTapGLES.so|38377e99ca5a307c885396a66ab148cd8ee95e73
+vendor/lib64/egl/libq3dtools_adreno.so|0ff4a4961eb8c786051cecb5a966281d21a42b41
+vendor/lib64/egl/libq3dtools_esx.so|813fa9dc7730e1983eaf4bd78761dc10541730fa
 vendor/lib64/hw/vulkan.msm8998.so|f4d7d5825d6e564943cf0d18c1fe78ab86a2797a
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libbccQTI.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libCB.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/librs_adreno_sha1.so
-vendor/lib64/librs_adreno.so
-vendor/lib64/libRSDriver_adreno.so
+vendor/lib64/libC2D2.so|0a8d13db8524e55b90642df5e9149c342682568a
+vendor/lib64/libCB.so|c162fd6b1e3deb5f1619cd6371c57a26f8a04b0c
+vendor/lib64/libOpenCL.so|dd448c2d292c83f8514e2afa96d4cdd301d1e465
+vendor/lib64/libRSDriver_adreno.so|ff1eb1765548b027e59f9569ddac6b87dd6448d3
+vendor/lib64/libadreno_utils.so|d9c3eef0cbf22d5eade465497606d5584f59036a
+vendor/lib64/libbccQTI.so|9341df956ae5f5e24d2944f1bca3044a1a185c5e
+vendor/lib64/libc2d30_bltlib.so|6bb0219b5211cd1b7de8466de871e13230ecfbd1
+vendor/lib64/libgsl.so|09baaa78e11738247ef4de275936a1d577711bc4
+vendor/lib64/libllvm-glnext.so|554426ca2ef5bc2a4ba347c9e517683b47cf2980
+vendor/lib64/libllvm-qcom.so|68d4515a13305f1f4e30f6623dee5656f6265c2d
+vendor/lib64/librs_adreno.so|7088821ba4613c55ab76676250fb5381ebf3b116
+vendor/lib64/librs_adreno_sha1.so|29085a4ce4d603564b2768d3b3cee01b6ab02edb
 
 # Graphics - DRM
 vendor/lib/libsdedrm.so
@@ -773,10 +778,6 @@ vendor/lib/libtinyxml2_1.so
 vendor/lib/vendor.display.color@1.0.so
 vendor/lib/vendor.display.color@1.1.so
 vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.config@1.0.so
-vendor/lib/vendor.display.config@1.1.so
-system/lib/vendor.display.config@1.3.so:vendor/lib/vendor.display.config@1.3.so
-system/lib/vendor.display.config@1.4.so:vendor/lib/vendor.display.config@1.4.so
 vendor/lib/vendor.display.postproc@1.0.so
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/libqseed3.so
@@ -788,11 +789,6 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.config@1.0.so
-vendor/lib64/vendor.display.config@1.1.so
-system/lib64/vendor.display.config@1.3.so:vendor/lib64/vendor.display.config@1.3.so
-system/lib64/vendor.display.config@1.4.so:vendor/lib64/vendor.display.config@1.4.so
-
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
@@ -836,54 +832,57 @@ vendor/lib64/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libsmwrapper.so
 
 # Media
-lib/libmmosal.so
+lib/libmmosal.so|90423946d3ddf909e760c8eefe0904eee2ffdfec
 lib/vendor.qti.hardware.vpp@1.1.so
-lib64/libmmosal.so
+lib64/libmmosal.so|8b627702ea24d3b313a0103444af63918f8149f4
 lib64/vendor.qti.hardware.vpp@1.1.so
--vendor/lib/libgpustats.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libvpplibrary.so
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmosal_proprietary.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
+vendor/lib/libAlacSwDec.so|52d58a68ec53b189f1f93437ab6a803827b8e567
+vendor/lib/libApeSwDec.so|3d1c50abb785a172806104a422a4cb4a3d27dc00
+vendor/lib/libFlacSwDec.so|64695c933730291919445e3ee45c1ae08b5960c8
+vendor/lib/libI420colorconvert.so|6c51cdc6d88b54190b0918831ec9d714257653c0
+vendor/lib/libOmxAacDec.so|16e109fcbd2d5efc3db63fd8af1efc8cb5c14100
+vendor/lib/libOmxAlacDec.so|9ec1fc777cea2856d14489c13a1f7e73c779ef0b
+vendor/lib/libOmxAlacDecSw.so|3af5cb8a0782322241942b7fc62d27ccacb7b44c
+vendor/lib/libOmxAmrDec.so|a72205775b54c3cc461c22ddf857e6723ae49e00
+vendor/lib/libOmxAmrwbplusDec.so|001d0c36ce174e52b10f885f3f4d516fc7137c32
+vendor/lib/libOmxApeDec.so|c2946067e428797da7b28e1c59f39541e6bd34de
+vendor/lib/libOmxApeDecSw.so|2004bd49e88122a944dcccc3d8fde029d8dee383
+vendor/lib/libOmxDsdDec.so|9560542a8a7ce7ec71e26a71af300bc22888a4b7
+vendor/lib/libOmxEvrcDec.so|9771e69ed6ac031dd555e012d327fcb7cace2930
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxG711Enc.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libvpphvx.so
-vendor/lib/libvqzip.so
+vendor/lib/libOmxQcelp13Dec.so|14744e71781b449d840f1e4795a34e66bf269fae
+vendor/lib/libOmxVideoDSMode.so|a59956b7b52cbbb1fa48dbc157a5938da0ea75d7
+vendor/lib/libOmxVpp.so|ded1fdf08f1d68e11c9ebebe705733a08ed1b72a
+vendor/lib/libOmxWmaDec.so|f648dd6032c21ba700047c0d4715e91fb12ecc2a
+-vendor/lib/libgpustats.so|62347d048a9b06ea998c8037c4476c331eeeae88
+vendor/lib/libmm-color-convertor.so|11dad06df349c8977fc4f37a9b3a80dd6938912f
+vendor/lib/libomx-dts.so|498a0c3f22ff2e57dbab063ed3bdd099d2f843f2
+vendor/lib/libvpphvx.so|fb217e4af9b3e31863b439063fb859202e70883c
+vendor/lib/libvpplibrary.so|f283a2d0db68696dec4bfc4bc71435b669d2578c
+vendor/lib/libvqzip.so|21055a646230310c6236866c3ddc38f1e1ff3a26
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
--vendor/lib64/libgpustats.so
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libOmxVpp.so
-vendor/lib64/libvpplibrary.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmosal_proprietary.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
+vendor/lib64/libAlacSwDec.so|52ffec3627efa16eb551648d73f0e7b662c1c57b
+vendor/lib64/libApeSwDec.so|17f8c12c2ba2f7de598e94f792118aaea0a52670
+vendor/lib64/libFlacSwDec.so|2983926e6af28b87185aea915901c6bfd0208b0b
+vendor/lib64/libI420colorconvert.so|f221f3702b8bc458cd128a1a1359a27d24692944
+vendor/lib64/libOmxAacDec.so|dd4c78dcbef20ef5d06822999ae79984a1d03f85
+vendor/lib64/libOmxAlacDec.so|4acb811a00e45ff857e91f5921312cb7bd5e8f2c
+vendor/lib64/libOmxAlacDecSw.so|e52fe936c5b2f551761ab00593e219ea450e0ba1
+vendor/lib64/libOmxAmrDec.so|5001b21eca127875270393aeea64909f64440bce
+vendor/lib64/libOmxAmrwbplusDec.so|af00c7867936f06ff3e5cf8528161d52cc222bb9
+vendor/lib64/libOmxApeDec.so|20f4e9b0e7f6588d49f289e994feae6cb5de3b09
+vendor/lib64/libOmxApeDecSw.so|bd08b75c8b717efb925b251ef56664cf8edd2bad
+vendor/lib64/libOmxEvrcDec.so|f000677b7c8c4571f23f43ba5579b46d238d06d8
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxG711Enc.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxWmaDec.so
-vendor/lib64/libvpphvx.so
+vendor/lib64/libOmxQcelp13Dec.so|2656bc6116c4cb1886763ad3862188503dc68552
+vendor/lib64/libOmxVpp.so|3e6d83ff91792784b4d98358645dc05f41a45dea
+vendor/lib64/libOmxWmaDec.so|d414e3e3ae58b80490062d433184a279bdc2d92b
+-vendor/lib64/libgpustats.so|020fc92873b886d95ee442eaf9c5083aa00a4350
+vendor/lib64/libmm-color-convertor.so|fea991a1d894186fac27a155f002b7c314e8047d
+vendor/lib64/libvpphvx.so|3787b2bb5fe4cb98811ce7d983e4e01d3032671a
+vendor/lib64/libvpplibrary.so|f278c1865ef6c4ce5f7d8681d7e60f0d2ee02f1f
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 
 # Perf
@@ -935,7 +934,7 @@ vendor/lib/libminkdescriptor.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
-vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_cci.so|3b018d496cadf0799fc5afd3f137e562b524b72a
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
@@ -951,7 +950,7 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
-vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_cci.so|505903070faa271b9718e4010f35fa80ce2e4569
 vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
