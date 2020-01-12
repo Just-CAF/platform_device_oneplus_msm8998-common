@@ -103,3 +103,7 @@
 
 # tri-state-key
 /system/bin/tri-state-key_daemon		                u:object_r:tri-state-key_daemon_exec:s0
+
+# Power HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service-qti      u:object_r:hal_power_default_exec:s0
+
