@@ -1,9 +1,7 @@
-allow thermal-engine self:capability { chown fowner };
-
+dontaudit thermal-engine sysfs:dir read;
 dontaudit thermal-engine self:capability dac_override;
 
-r_dir_file(thermal-engine, sysfs)
-r_dir_file(thermal-engine, sysfs_batteryinfo)
-r_dir_file(thermal-engine sysfs_devfreq)
-r_dir_file(thermal-engine sysfs_graphics)
-r_dir_file(thermal-engine sysfs_thermal)
+allow thermal-engine sysfs_devfreq:dir { r_dir_perms };
+allow thermal-engine sysfs_thermal:dir { r_dir_perms };
+allow thermal-engine sysfs_batteryinfo:dir { r_dir_perms };
+
