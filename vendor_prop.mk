@@ -57,7 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio.offload.gapless.enabled=true \
     vendor.audio.safx.pbe.enabled=true \
-    vendor.audio.parser.ip.buffer.size=262144 \
+    vendor.audio.parser.ip.buffer.size=0 \
     vendor.audio.flac.sw.decoder.24bit=true \
     persist.vendor.bt.a2dp_offload_cap=false \
     persist.vendor.bt.enable.splita2dp=false \
@@ -66,8 +66,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.hw.aac.encoder=true \
     vendor.fm.a2dp.conc.disabled=true \
     vendor.audio.noisy.broadcast.delay=600 \
-    vendor.audio.spkr_prot.tx.sampling_rate=48000 \
-    vendor.audio.volume.headset.gain.depcal=true \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=11
 
@@ -135,16 +133,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=com.oneplus.camera,org.lineageos.snap,com.google.android.Pixel2ModUrnyx05 \
+    vendor.camera.aux.packagelist=com.oneplus.camera,org.lineageos.snap,com.google.android.GoogleCamera \
     vendor.camera.hal1.packagelist=com.whatsapp \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false \
     persist.vendor.camera.tintless.skip=1
-
-# Codec2 switch
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.media.codec2=2
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -209,6 +203,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.omx_default_rank.sw-audio=1 \
+    debug.stagefright.omx_default_rank=0 \
     media.stagefright.enable-player=true \
     media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
@@ -220,6 +216,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mmp.enable.3g2=true \
     media.aac_51_output_enabled=true \
     mm.enable.sec.smoothstreaming=true \
+    persist.mm.enable.prefetch=true \
     vidc.enc.dcvs.extra-buff-count=2 \
     persist.media.treble_omx=true \
     vendor.vidc.debug.level=1 \
@@ -249,10 +246,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.at_library=libqti-at.so \
     ro.vendor.gt_library=libqti-gt.so \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_age=5000 \
-    ro.vendor.qti.sys.fw.bservice_limit=5
+    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_age=5000
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -270,7 +269,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_3="" \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=22,20 \
-		persist.sys.fflag.override.settings_network_and_internet_v2=true \
     telephony.lteOnCdmaDevice=1 \
     ro.telephony.iwlan_operation_mode=legacy \
     keyguard.no_require_sim=true \
