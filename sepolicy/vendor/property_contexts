@@ -7,3 +7,5 @@ vendor.oem.device.imeicache1           u:object_r:radio_prop:s0
 camera.on                              u:object_r:camera_prop:s0
 
 vendor.display.mode                    u:object_r:vendor_display_prop:s0
+
+wifi.                                  u:object_r:wifi_prop:s0
