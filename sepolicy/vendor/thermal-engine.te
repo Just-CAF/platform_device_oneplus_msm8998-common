@@ -1,6 +1,6 @@
-dontaudit thermal-engine sysfs:dir read;
 dontaudit thermal-engine self:capability dac_override;
 
+allow thermal-engine sysfs:dir r_dir_perms;
 allow thermal-engine sysfs_devfreq:dir { r_dir_perms };
 allow thermal-engine sysfs_thermal:dir { r_dir_perms };
 allow thermal-engine sysfs_batteryinfo:dir { r_dir_perms };
