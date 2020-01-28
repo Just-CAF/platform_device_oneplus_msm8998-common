@@ -1,4 +1,4 @@
-	#
+#
 # Copyright (C) 2017 The LineageOS Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,7 +29,9 @@ PLATFORM_PATH := device/oneplus/msm8998-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
+# Vendor
 BOARD_VENDOR := oneplus
+VENDOR_SECURITY_PATCH := 2019-12-01
 
 # we are too big to fit in
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
