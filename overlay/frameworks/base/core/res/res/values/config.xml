@@ -389,6 +389,9 @@
         <item>"softap0"</item>
     </string-array>
 
+    <!-- Device supports Sustained Performance Mode-->
+   <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
