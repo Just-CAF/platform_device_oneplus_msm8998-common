@@ -141,7 +141,7 @@ on property:wlan.driver.status=ok
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
-    setprop sys.usb.configfs 1
+    setprop vendor.usb.qdss.inst.name "qdss"
 
 #Peripheral manager
 service vendor.per_mgr /vendor/bin/pm-service
