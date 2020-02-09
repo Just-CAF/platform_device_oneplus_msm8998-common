@@ -19,7 +19,11 @@ lib/vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper.so
 lib64/vendor.oneplus.camera.CameraHIDL@1.0.so
 lib64/vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper.so
 
+<<<<<<< HEAD
 # Dash
+=======
+# DASH
+>>>>>>> f03e48505... msm8998-common: Copy vendor.oneplus.camera.CameraHIDL
 vendor/xbin/dashd
 
 # Display calib

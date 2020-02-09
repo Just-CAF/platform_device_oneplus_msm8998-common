@@ -6,7 +6,7 @@ allow hal_nfc_default nfc_vendor_data_file:dir { rw_dir_perms };
 allow hal_nfc_default nfc_vendor_data_file:file { rw_file_perms };
 
 add_hwservice(hal_nfc_default, nxpnfc_hwservice)
-add_hwservice(hal_nfc_default, default_android_hwservice)
+add_hwservice(hal_nfc_default_exec, default_android_hwservice)
 
 allow hal_nfc_default nxpese_hwservice:hwservice_manager { find };
 
