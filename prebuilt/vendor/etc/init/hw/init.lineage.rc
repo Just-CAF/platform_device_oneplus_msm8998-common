@@ -40,6 +40,10 @@ on boot
     chown system system /proc/tri-state-key/keyCode_bottom
     chmod 0660 /proc/tri-state-key/keyCode_bottom
 
+    # Display modes
+    chown system graphics /sys/devices/virtual/graphics/fb0/night_mode
+    chmod 0666 /sys/devices/virtual/graphics/fb0/night_mode
+
 service vendor.wifi-mac-generator /vendor/bin/wifi-mac-generator
     class main
     user wifi
