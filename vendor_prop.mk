@@ -126,7 +126,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee \
     persist.vendor.bluetooth.a4wp=false \
     vendor.bluetooth.emb_wp_mode=false \
-    vendor.bluetooth.wipower=false
+    vendor.bluetooth.wipower=false \
+    ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Cabl
 PRODUCT_PROPERTY_OVERRIDES += \
