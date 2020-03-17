@@ -114,3 +114,4 @@
 /firmware(/.*)?                                                 u:object_r:firmware_file:s0
 /bt_firmware(/.*)?                                              u:object_r:bt_firmware_file:s0
 
+/dev/stune(/.*)?                                                u:object_r:cgroup:s0
