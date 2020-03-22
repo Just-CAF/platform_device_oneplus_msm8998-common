@@ -493,7 +493,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libgui_vendor \
-    vndk-sp
+    vndk_package
 
 # VR
 PRODUCT_PACKAGES += \
