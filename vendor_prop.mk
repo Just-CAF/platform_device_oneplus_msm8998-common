@@ -126,8 +126,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee \
     persist.vendor.bluetooth.a4wp=false \
     vendor.bluetooth.emb_wp_mode=false \
-    vendor.bluetooth.wipower=false \
-    ro.bluetooth.library_name=libbluetooth_qti.so
+    vendor.bluetooth.wipower=false
 
 # Cabl
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -174,9 +173,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/config
 
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.overlay.izat.optin=rro
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=420 \
     ro.opengles.version=196610 \
     ro.sf.hwc_set_default_colormode=true \
     debug.sf.hw=1 \
@@ -199,9 +201,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
 
 # IOP
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    vendor.iop.enable_uxe=0 \
-#    vendor.iop.enable_prefetch_ofr=0
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.iop.enable_uxe=0 \
+    vendor.iop.enable_prefetch_ofr=0
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -218,11 +220,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mmp.enable.3g2=true \
     media.aac_51_output_enabled=true \
     mm.enable.sec.smoothstreaming=true \
+    vendor.mm.enable.qcom_parser=67092479 \
     persist.mm.enable.prefetch=true \
     vidc.enc.dcvs.extra-buff-count=2 \
     persist.media.treble_omx=true \
     vendor.vidc.debug.level=1 \
-    vendor.swvdec.log.level=1
+    vendor.swvdec.log.level=1 \
+    vendor.vidc.enc.disable.pq=true
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -271,6 +275,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_3="" \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=22,20 \
+    ro.telephony.use_old_mnc_mcc_format=true \
     telephony.lteOnCdmaDevice=1 \
     ro.telephony.iwlan_operation_mode=legacy \
     keyguard.no_require_sim=true \
@@ -309,6 +314,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.iwlan_mux=9 \
     persist.data.df.dev_name=rmnet_usb0 \
     persist.vendor.data.iwlan.enable=true
+
+# Sdcard
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.fuse_sdcard=true
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
