@@ -36,6 +36,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
         <version>2.4</version>
@@ -88,8 +97,8 @@
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
-            <instance>gnss_vendor</instance>
         </interface>
+        <fqname>@1.0::IGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
@@ -210,16 +219,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.radio.deprecated</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOemHook</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.renderscript</name>
         <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
@@ -227,11 +226,9 @@
     <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
             <instance>eSE1</instance>
         </interface>
     </hal>
@@ -241,6 +238,15 @@
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.soundtrigger</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>ISoundTriggerHw</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -335,15 +341,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.bluetooth.audio</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -355,7 +352,7 @@
     <hal format="hidl">
         <name>com.qualcomm.qti.imscmservice</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>IImsCmService</name>
             <instance>qti.ims.connectionmanagerservice</instance>
@@ -364,7 +361,7 @@
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
@@ -420,6 +417,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.nxp.nxpnfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.oneplus.fingerprint.extension</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -437,7 +443,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!--<hal format="hidl">
         <name>vendor.oneplus.hardware.hdcpkey</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -445,7 +451,7 @@
             <name>IOneplusHdcpKey</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal>-->
     <hal format="hidl">
         <name>vendor.oneplus.hardware.ifaa</name>
         <transport>hwbinder</transport>
@@ -467,7 +473,7 @@
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.1</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
@@ -485,7 +491,7 @@
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>3.0</version>
         <interface>
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
@@ -510,13 +516,30 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.data.connection</name>
+        <name>vendor.qti.hardware.bluetooth_audio</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>2.0</version>
         <interface>
-            <name>IDataConnection</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.bluetooth_sar</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBluetoothSar</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.btconfigstore</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBTConfigStore</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -527,8 +550,29 @@
             <name>IService</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IService/default</fqname>
     </hal>
-    <!-- Data Link Latency -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.connection</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IDataConnection</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.iwlan</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IIWlan</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
         <transport>hwbinder</transport>
@@ -564,7 +608,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>IPerf</name>
             <instance>default</instance>
@@ -576,6 +620,15 @@
         <version>1.0</version>
         <interface>
             <name>IQdutilsDisp</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qseecom</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQSEECom</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -605,7 +658,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.6</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -635,7 +688,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.3</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -645,7 +698,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.2</version>
         <interface>
             <name>IUim</name>
             <instance>Uim0</instance>
@@ -711,28 +764,10 @@
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.1</version>
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.bluetooth_audio</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.bluetooth_sar</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBluetoothSar</name>
-            <instance>default</instance>
         </interface>
     </hal>
 </manifest>
