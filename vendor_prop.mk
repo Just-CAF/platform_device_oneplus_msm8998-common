@@ -60,7 +60,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.spkr_prot.tx.sampling_rate=48000 \
     vendor.audio.parser.ip.buffer.size=0 \
     vendor.audio.flac.sw.decoder.24bit=true \
-    persist.vendor.bt.a2dp_offload_cap=false \
     persist.vendor.bt.enable.splita2dp=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
@@ -122,12 +121,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
-    persist.bluetooth.a2dp_offload.cap=false \
-    vendor.qcom.bluetooth.soc=cherokee \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.bluetooth.a2dp_offload.disabled=false \
     persist.vendor.bluetooth.a4wp=false \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
+    ro.bluetooth.a2dp_offload.supported=true \
     vendor.bluetooth.emb_wp_mode=false \
     vendor.bluetooth.wipower=false \
-    ro.bluetooth.library_name=libbluetooth_qti.so
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Cabl
 PRODUCT_PROPERTY_OVERRIDES += \
