@@ -150,9 +150,13 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    libbt-vendor \
+    libbthost_if \
+    bt-mac-generator \
+    audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.0 \
-    libbluetooth_qti
+    vendor.qti.hardware.bluetooth_dun@1.0
 
 # Camera
 PRODUCT_PACKAGES += \
