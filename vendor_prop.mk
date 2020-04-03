@@ -199,9 +199,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
 
 # IOP
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.iop.enable_uxe=0 \
-    vendor.iop.enable_prefetch_ofr=0
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    vendor.iop.enable_uxe=0 \
+#    vendor.iop.enable_prefetch_ofr=0
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
