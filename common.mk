@@ -106,8 +106,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@2.0-util \
     android.hardware.audio.common@5.0-util \
     android.hardware.soundtrigger@2.2-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
     audio.a2dp.default \
+    audio.bluetooth.default \
     audio.primary.msm8998 \
     audio.r_submix.default \
     audio.usb.default \
@@ -256,7 +256,9 @@ PRODUCT_PACKAGES += \
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
