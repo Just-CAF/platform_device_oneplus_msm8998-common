@@ -95,6 +95,9 @@
 # Touch
 #/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus_msm8998 u:object_r:hal_touch_oneplus_msm8998_exec:s0
 
+# NFC
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.1-service                                     u:object_r:hal_secure_element_default:s0
+
 # Wifi
 /(vendor|system/vendor)/bin/wifi-mac-generator                  u:object_r:wifi_mac_generator_exec:s0
 
