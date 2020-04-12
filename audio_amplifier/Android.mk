@@ -42,6 +42,8 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_SRC_FILES := audio_amplifier.c
 
+LOCAL_CFLAGS += -Wno-unused-parameter
+
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_ANC_HEADSET)),true)
     LOCAL_CFLAGS += -DANC_HEADSET_ENABLED
 endif
