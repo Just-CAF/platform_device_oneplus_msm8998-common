@@ -118,6 +118,7 @@ PRODUCT_PACKAGES += \
     libbatterylistener \
     libcirrusspkrprot \
     libcomprcapture \
+    libeffectsconfig \
     libexthwplugin \
     libhdmiedid \
     libhfp \
