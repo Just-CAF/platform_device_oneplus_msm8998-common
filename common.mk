@@ -294,8 +294,7 @@ PRODUCT_PACKAGES += \
     libgeofencing \
     libgnss \
     libgnsspps \
-    libsynergy_loc_api \
-    libwifi-hal-ctrl
+    libsynergy_loc_api
 
 # GPS Configurations
 PRODUCT_PACKAGES += \
@@ -560,8 +559,13 @@ PRODUCT_PACKAGES += \
     hostapd \
     hostapd_cli \
     libqsap_sdk \
-    libQWiFiSoftApCfg \
+    libwpa_client \
+    libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.0.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     wificond \
     wpa_supplicant \
     wpa_supplicant.conf \
