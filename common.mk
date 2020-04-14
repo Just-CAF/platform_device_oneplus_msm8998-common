@@ -166,9 +166,9 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
 
-# LIBPERFLOCK
-#PRODUCT_PACKAGES += \
-#    org.codeaurora.Performance
+# Perf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
