@@ -9,5 +9,19 @@ add_hwservice(hal_nfc_default, nxpnfc_hwservice)
 add_hwservice(hal_nfc_default_exec, default_android_hwservice)
 
 allow hal_nfc_default nxpese_hwservice:hwservice_manager { find };
+allow hal_nfc_default nxpnfc_hwservice:hwservice_manager { find };
 
 binder_call(hal_nfc_default, hal_secure_element_default)
+
+# Allow access to the HALs
+hal_client_domain(hal_nfc_default, hal_secure_element)
+
+# Allow hal_nfc_default to find hal_secure_element_hwservice
+allow hal_nfc_default hal_secure_element_hwservice:hwservice_manager find;
+
+# Allow hal_nfc_default to read and write to proc_touchpanel
+allow hal_nfc_default proc_touchpanel:dir search;
+allow hal_nfc_default proc_touchpanel:file rw_file_perms;
+
+# Allow hal_nfc_default to get vendor_nfc_prop
+get_prop(hal_nfc_default, vendor_nfc_prop)
