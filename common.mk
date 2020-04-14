@@ -168,6 +168,8 @@ PRODUCT_PACKAGES += \
     com.dsi.ant.antradio_library
 
 # Perf
+-include vendor/qcom/common/perf/qti-perf.mk
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
