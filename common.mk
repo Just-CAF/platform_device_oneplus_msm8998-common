@@ -184,7 +184,6 @@ PRODUCT_PACKAGES += \
     javax.btobex \
     libattrib_static \
     libbt-vendor \
-    libbthost_if \
     bt_logger \
     libbt-hidlclient \
     BluetoothExt \
