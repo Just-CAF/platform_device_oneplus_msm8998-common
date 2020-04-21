@@ -99,7 +99,9 @@
 /sys/kernel/boot_wlan(/.*)?                                     u:object_r:sysfs_wifi:s0
 /sys/module/fpc1020_tee/parameters/ignor_home_for_ESD           u:object_r:sysfs_fpc_key:s0
 
-/sys/project_info(/.*)?                                         u:object_r:sysfs_data:s0
+/sys/project_info(/.*)?                                         u:object_r:sysfs_project_info:s0
+
+/sys/devices/soc/780000.qcom,msm-core/uio(/.*)?                 u:object_r:sysfs_uio:s0
 
 # Touch
 #/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus_msm8998 u:object_r:hal_touch_oneplus_msm8998_exec:s0
