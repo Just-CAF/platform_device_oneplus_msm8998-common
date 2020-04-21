@@ -27,3 +27,6 @@ allow system_server sysfs_vibrator:file { r_file_perms };
 
 binder_call(system_server init)
 
+# Display modes
+allow system_server sysfs_dm:file { rw_file_perms };
+allow system_server sysfs_dm:dir { search };
