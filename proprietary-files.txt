@@ -19,11 +19,7 @@ lib/vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper.so
 lib64/vendor.oneplus.camera.CameraHIDL@1.0.so
 lib64/vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper.so
 
-<<<<<<< HEAD
 # Dash
-=======
-# DASH
->>>>>>> f03e48505... msm8998-common: Copy vendor.oneplus.camera.CameraHIDL
 vendor/xbin/dashd
 
 # Display calib
@@ -34,9 +30,9 @@ vendor/etc/qdcm_calib_data_samsung_s6e3fc1_cmd_mode_dsi_panel.xml|dc362ab09d4cd6
 # DRM
 vendor/etc/init/vendor.oneplus.hardware.drmkey@1.0-service.rc
 vendor/bin/hw/vendor.oneplus.hardware.drmkey@1.0-service
-vendor/lib/libDrmKry.so
 vendor/lib64/libDrmKry.so
 vendor/lib64/vendor.oneplus.hardware.drmkey@1.0.so
+vendor/lib/libDrmKry.so
 
 # Graphics firmware
 vendor/firmware/a225p5_pm4.fw
