@@ -74,7 +74,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vr.high_performance.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
@@ -155,9 +155,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
-# Audio configuration file
-#-include vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8998/msm8998.mk
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -179,19 +176,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_dun@1.0 \
     vendor.qti.hardware.bluetooth_dun@1.0.vendor
 
-PRODUCT_PACKAGES += \
-    audio.hearing_aid.default \
-    android.hardware.bluetooth.audio@2.0-impl \
-    javax.btobex \
-    libattrib_static \
-    libbt-vendor \
-    bt_logger \
-    libbt-hidlclient \
-    BluetoothExt \
-    libbtconfigstore \
-    audio.a2dp.default_qti \
-    audio.hearing_aid.default_qti
-
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
@@ -203,8 +187,7 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.postproc@1.0 \
-    SnapdragonCamera
+    vendor.qti.hardware.camera.postproc@1.0
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
