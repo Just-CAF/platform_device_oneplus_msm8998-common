@@ -126,8 +126,6 @@ on boot
    chown system system /persist/speccfg/submask
    chown system system /persist/speccfg/partition
 
-   symlink /system/lib64/libashmemd_client.so /system/apex/com.android.media.swcodec/lib64/libashmemd_client.so
-
 #install video modules
    insmod /system/lib/modules/msm-vidc-vmem.ko
    insmod /system/lib/modules/msm-vidc.ko
