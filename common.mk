@@ -166,10 +166,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbluetooth_qti \
-    libbt-logClient \
     bt-mac-generator \
-    vendor.qti.hardware.bluetooth_audio@2.0 \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.bluetooth_dun@1.0 \
     vendor.qti.hardware.bluetooth_dun@1.0.vendor
 
