@@ -426,6 +426,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
+-include vendor/qcom/common/telephony/qti-telephony.mk
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
