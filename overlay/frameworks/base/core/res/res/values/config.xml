@@ -666,6 +666,11 @@
     <!-- Does the device have an alert slider -->
     <bool name="config_hasAlertSlider">true</bool>
 
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">0</integer>
+
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool> 
 
