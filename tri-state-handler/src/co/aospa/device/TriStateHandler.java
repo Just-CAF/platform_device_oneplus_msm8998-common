@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package co.aoscp.device;
+package co.aospa.device;
 
 import android.content.Context;
 import android.media.AudioManager;

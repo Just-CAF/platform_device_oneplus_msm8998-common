@@ -660,10 +660,10 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>co.aoscp.device.TriStateHandler</item>
+        <item>co.aospa.device.TriStateHandler</item>
     </string-array>
 
-    <!-- Does the device have an alert slider -->
+    <!-- Whether device has physical tri state switch -->
     <bool name="config_hasAlertSlider">true</bool>
 
     <!-- The location of the devices physical tri state switch
