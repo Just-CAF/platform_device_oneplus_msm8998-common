@@ -27,9 +27,9 @@ import com.android.internal.os.DeviceKeyHandler;
 public class TriStateHandler implements DeviceKeyHandler {
 
     // Slider key codes
-    private static final int MODE_NORMAL = 601;
+    private static final int MODE_SILENCE = 601;
     private static final int MODE_VIBRATION = 602;
-    private static final int MODE_SILENCE = 603;
+    private static final int MODE_NORMAL = 603;
 
     private static AudioManager mAudioManager;
     private static Context mContext;
