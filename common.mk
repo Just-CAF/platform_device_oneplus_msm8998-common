@@ -165,7 +165,8 @@ PRODUCT_PACKAGES += \
     libbluetooth_qti \
     bt-mac-generator \
     vendor.qti.hardware.bluetooth_dun@1.0 \
-    libbthost_if
+    libbthost_if \
+    libbt-vendor
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
