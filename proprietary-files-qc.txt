@@ -145,10 +145,8 @@ etc/bluetooth/bt_configstore.conf
 etc/bluetooth/bt_profile.conf
 etc/bluetooth/bt_stack_debug.conf
 etc/bluetooth/interop_database.conf
-lib/libbluetooth_qti.so
 lib/libbt-logClient.so
 lib/libbtconfigstore.so
-lib64/libbluetooth_qti.so
 lib64/libbt-logClient.so
 lib64/libbtconfigstore.so
 product/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
