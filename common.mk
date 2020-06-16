@@ -163,10 +163,14 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
+    audio.a2dp.default_qti \
     bt-mac-generator \
     libbthost_if \
     libbt-vendor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+    libbluetooth_qti \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.bluetooth_dun@1.0
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
