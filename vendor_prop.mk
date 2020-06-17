@@ -127,25 +127,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-aac-ldac \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.vendor.bluetooth.a4wp=false \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
     persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     ro.bluetooth.a2dp_offload.supported=true \
     persist.vendor.bt.a2dp_offload_cap=true \
-    ro.vendor.bluetooth.wipower=false \
-    vendor.bluetooth.emb_wp_mode=false \
     vendor.qcom.bluetooth.soc=cherokee \
     vendor.bluetooth.soc=cherokee \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     persist.vendor.btstack.enable.splita2dp=true \
     ro.bluetooth.a4wp=false \
-    ro.bluetooth.emb_wp_mode=false \
-    ro.bluetooth.wipower=false
-    vendor.hw.fm.init=0 \
-    vendor.qcom.bluetooth.soc=cherokee
+    vendor.hw.fm.init=0
 
 # Cabl
 PRODUCT_PROPERTY_OVERRIDES += \
