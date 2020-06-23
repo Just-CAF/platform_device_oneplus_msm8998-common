@@ -276,7 +276,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.at_library=libqti-at.so \
     ro.vendor.gt_library=libqti-gt.so \
     ro.vendor.qti.sys.fw.bg_apps_limit=60 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
