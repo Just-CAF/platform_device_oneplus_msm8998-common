@@ -101,7 +101,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@5.0-util \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
-    audio.bluetooth.default \
     audio.primary.msm8998 \
     audio.r_submix.default \
     audio.usb.default \
@@ -168,6 +167,7 @@ PRODUCT_PACKAGES += \
     libbluetooth_qti \
     vendor.qti.hardware.bluetooth_audio@2.0 \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.bluetooth_dun@1.0
 
 # Bluetooth aptX(HD)
