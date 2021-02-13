@@ -26,6 +26,8 @@ PLATFORM_PATH := device/oneplus/msm8998-common
 
 BOARD_VENDOR := oneplus
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 # we are too big to fit in
 PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
 
